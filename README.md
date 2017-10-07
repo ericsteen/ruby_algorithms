@@ -1,9 +1,10 @@
 # RubyAlgorithms
 
-TODO:
-
+DONE:
 Fibonacci(Dynamic Programming)
-Data Structures
+
+TODO:
+Data Structures:
 LinkedList (reverse, etc (coderust))
 Generalized BST
 Generalized Graph
@@ -11,11 +12,17 @@ Generalized Graph
 Algorithms:
 Kadane's
 Knapsack
+Multi-Armed Bandit
+Decision Tree Learning - https://en.wikipedia.org/wiki/Decision_tree_learning
 Coin Change
 Greedy
 Djikstra
 A*
 Metropolis-Hastings
+
+FUTURE WORK:
+Markov Decision Process
+
 
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_algorithms`. To experiment with that code, run `bin/console` for an interactive prompt.
