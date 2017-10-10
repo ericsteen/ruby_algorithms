@@ -6,8 +6,8 @@ require_relative 'ruby_algorithms/linked_list/linked_list'
 
 # Useful Algorithms written in Ruby
 module RubyAlgorithms
-  def self.run_benchmarks
-    Benchmark.bm 'QUERIES' do |x|
+  def self.run_query_benchmarks
+    Benchmark.benchmark "QUERIES\n" do |x|
       list = LinkedList.new
       9.times { |i| list.append(i) }
       x.report('size:')       { list.size }
@@ -20,8 +20,8 @@ module RubyAlgorithms
     end
   end
 
-  def self.update_benchmarks
-    Benchmark.bm 'UPDATES' do |x|
+  def self.run_update_benchmarks
+    Benchmark.benchmark "UPDATES\n" do |x|
       list = LinkedList.new
       9.times { |i| list.append(i) }
       x.report('append:')     { list.append(10) }
