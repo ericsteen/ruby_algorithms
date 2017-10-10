@@ -2,26 +2,36 @@
 
 DONE:
 Fibonacci(Dynamic Programming)
+LinkedList (reverse, etc (coderust))
 
 TODO:
 Data Structures:
-LinkedList (reverse, etc (coderust))
+Adjacency List
+Adjacency Matrix (non-sparse graphs, rare.. knuth)
+
 Generalized BST
 Generalized Graph
+DiGraph
+BiPartite graphs
+
+ADT API for algorithms (Princeton Lectures, Java "Algorithms" book)
 
 Algorithms:
 Kadane's
 Knapsack
 Multi-Armed Bandit
+BFS
+DFS
 Decision Tree Learning - https://en.wikipedia.org/wiki/Decision_tree_learning
 Coin Change
 Greedy
-Djikstra
-A*
+Shortest Paths (Djikstra, A*)
+Connected Components
 Metropolis-Hastings
 
 FUTURE WORK:
-Markov Decision Process
+Markov Decision Processes
+Portfolio Optimization
 
 
 

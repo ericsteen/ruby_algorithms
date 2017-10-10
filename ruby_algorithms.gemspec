@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Eric Steen"]
   spec.email         = ["ericsteen1@gmail.com"]
 
-  spec.summary       = %q{Some Interesting Ruby Algorithms}
+  spec.summary       = %q{Some Interesting Algorithms}
   spec.description   = %q{Useful Algorithms.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
@@ -34,4 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "byebug", "~> 3.0"
+  spec.add_development_dependency "rubocop", "~> 0.50.0"
+  spec.add_development_dependency "awesome_print", "~> 1.8.0"
 end

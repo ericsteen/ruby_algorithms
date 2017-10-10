@@ -1,60 +1,122 @@
+require_relative 'node'
+require 'awesome_print'
+
+# http://rubyalgorithms.com/singly_linked_list.html
 class LinkedList
+  attr_reader :size
 
-  def initialize(data)
-    @head = Node.new(data, nil)
+  def initialize
+    @head = nil
+    @tail = nil
+    @size = 0
   end
 
-  def add(data)
-    current = @head
-    while current.next != nil
-      current = current.next
-    end
-    current.next = Node.new(data, nil)
-  end
-
-  def delete(data)
-    current.next = @head
-    if current.data = data
-      @head = current.next
+  def append(data)
+    node = make_node(data)
+    if @head.nil?
+      @head = node
     else
-      while (current.next != nil) && (current.next.data != data)
-        current = current.next
-      end
-      unless current.next == nil
-        current.next = current.next.next
-      end
+      @tail.next = node
+    end
+    @tail = node
+    @size += 1
+  end
+
+  def prepend(data)
+    node = make_node(data)
+    node.next = @head
+    @head = node
+    node
+  end
+
+  def head
+    return nil if @head.nil?
+    @head
+  end
+
+  def tail
+    return nil if @tail.nil?
+    @tail
+  end
+
+  def at(index)
+    return nil if @head.nil? || index > @size - 1
+    tmp = @head
+    index.times { tmp = tmp.next }
+    tmp.data
+  end
+
+  def contains?(data)
+    return false if @head.nil?
+    curr = @head
+    until curr.nil?
+      return true if curr.data == data
+      curr = curr.next
+    end
+    false
+  end
+
+  # def find(data)
+  #
+  # end
+  #
+  # def insert_at
+  #
+  # end
+
+  def remove_at!(removal_node)
+    node = @head
+    prev = nil
+
+    until node.next.nil?
+      (prev.next = node.next) && return if node == removal_node
+      prev = node
+      node = node.next
     end
   end
 
-  # Basically, we solve this problem recursively. Given a node,
-  # we first check whether or not the node is the last of the list.
-  # If it is, then we just return immediately (i.e. the reverse of [6]
-  # is just [6]). If not, pass the next node into our reverse function.
-  # This will reverse the list and place the node that we passed in at the
-  # end of the reversed list. Then, stick our current node on the “next” of
-  # this list. It’s a bit confusing because of the trick that the next of
-  # the current node actually ends up at the end of the reversed list so the
-  # next of the next of the current node is where we want to put the current node.
-  # Check it out in code:
+  # def insert_before
+  #
+  # end
+  #
+  # def insert_after
+  #
+  # end
 
+  def empty?
+    @head.nil?
+  end
 
-  def reverse_list(curr)
-    return curr if curr == nil or curr.next_node == nil
+  def to_s
+    curr = @head
+    until curr.nil?
+      curr.to_s unless curr.nil?
+      curr = curr.next
+    end
+  end
 
-    next_node = curr.next_node
-    new_head = reverse_list(curr.next_node)
-    next_node.next_node = curr
-    curr.next_node = nil
-    return new_head
+  def reverse(node = @head)
+    (@head = node) && return if node.next.nil?
+    reverse(node.next)
+    node.next.next = node
+    node.next = nil
   end
 
   def return_list
     elements = []
-    current = @head
-    while current.next != nil
-      elements << current
-      current = current.next
+    curr = @head
+    until curr.nil?
+      elements << curr
+      curr = curr.next
     end
-    elements << current
+    elements
+  end
+
+  def print_list
+    return_list.map(&:data).join(',')
+  end
+
+  def make_node(object)
+    object.is_a?(Node) ? object : Node.new(object)
   end
 end

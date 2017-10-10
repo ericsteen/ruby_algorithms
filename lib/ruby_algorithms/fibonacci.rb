@@ -1,43 +1,48 @@
 # fibonacci sequence
 module Fib
-
-  def self.mem(store={})
-    @mem ||= store
-  end
-
+  @mem ||= {}
   # top down: recursive
   def self.fib(n)
-    return mem[n] if mem[n]
-    if n <= 2
-      f = 1
-    else
-      f = fib(n-1) + fib(n-2)
-    end
-    mem[n] = f
-    puts f
-    return f
+    return @mem[n] if @mem[n]
+    f = if n <= 2
+          1
+        else
+          fib(n - 1) + fib(n - 2)
+        end
+    @mem[n] = f
+    f
   end
 
   # bottom up: iterative
-  def iter_fib(n=1..25)
+  def self.iter_fib(n = 25)
     fib = {}
-    for i in 1..(n.size-1)
-      if i <= 2
-        f = 1
-      else
-        f = fib[i-1] + fib[i-2]
-      end
+    n.times do |i|
+      f = if i <= 2
+            1
+          else
+            fib[i - 1] + fib[i - 2]
+          end
       fib[i] = f
-      puts f
     end
+    fib.values
+  end
+
+  def self.hash_fib
+    fib = Hash.new { |h, k| h[k] = k < 2 ? k : h[k - 1] + h[k - 2] }
+    fib[25]
+  end
+
+  def self.lambda_fib
+    f = ->(x) { x < 2 ? x : f[x - 1] + f[x - 2] }
+    f[6]
   end
 end
 
+require 'benchmark'
 
-Fib.fib(25)
-puts Fib.mem
-
-# iter_fib
-
-# h = Hash.new { |hash,key| hash[key] = hash[key-1] + hash[key-2] }
-# h[25]
+Benchmark.bm do |x|
+  x.report('fib:')         { Fib.fib(25) }
+  x.report('iter_fib:')    { Fib.iter_fib }
+  x.report('hash_fib:')    { Fib.hash_fib }
+  x.report('lambda_fib:')  { Fib.hash_fib }
+end
