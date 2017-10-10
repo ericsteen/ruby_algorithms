@@ -36,13 +36,13 @@ module Fib
     f = ->(x) { x < 2 ? x : f[x - 1] + f[x - 2] }
     f[6]
   end
-end
 
-require 'benchmark'
-
-Benchmark.bm do |x|
-  x.report('fib:')         { Fib.fib(25) }
-  x.report('iter_fib:')    { Fib.iter_fib }
-  x.report('hash_fib:')    { Fib.hash_fib }
-  x.report('lambda_fib:')  { Fib.hash_fib }
+  def self.run_benchmarks
+    Benchmark.benchmark "FIBONACCI" do |x|
+      x.report('fib:')         { Fib.fib(25) }
+      x.report('iter_fib:')    { Fib.iter_fib }
+      x.report('hash_fib:')    { Fib.hash_fib }
+      x.report('lambda_fib:')  { Fib.lambda_fib }
+    end
+  end
 end
