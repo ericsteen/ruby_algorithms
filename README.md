@@ -6,6 +6,7 @@ LinkedList (reverse, etc (coderust))
 
 TODO:
 Data Structures:
+
 Adjacency List
 Adjacency Matrix (non-sparse graphs, rare.. knuth)
 
