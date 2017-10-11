@@ -19,24 +19,36 @@ RSpec.describe LinkedList, 'Updates' do
     expect(subject.print_list).to eq('-1,0,1,2,3,4')
   end
 
-  it 'delete' do
+  it '#delete' do
   end
 
   it '#reverse returns the list in opposite order' do
     expect(subject.print_list).to eq('0,1,2,3,4')
-    subject.reverse
+    subject.recursive_reverse
     expect(subject.print_list).to eq('4,3,2,1,0')
   end
 
-  it 'insert_at' do
+  it '#iter_reverse returns the list in opposite order' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    subject.iterative_reverse
+    expect(subject.print_list).to eq('4,3,2,1,0')
   end
 
-  it 'remove_at' do
+  it '#insert_before' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    subject.insert_before(5, 1)
+    expect(subject.print_list).to eq('0,5,1,2,3,4')
   end
 
-  it 'insert_before' do
+  it '#insert_after' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    subject.insert_after(5, 1)
+    expect(subject.print_list).to eq('0,1,5,2,3,4')
   end
 
-  it 'insert_after' do
+  it '#remove_at' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    subject.remove_at(1)
+    expect(subject.print_list).to eq('0,2,3,4')
   end
 end

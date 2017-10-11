@@ -14,7 +14,7 @@ module Fib
   end
 
   # bottom up: iterative
-  def self.iter_fib(n = 25)
+  def self.iter_fib(n)
     fib = {}
     n.times do |i|
       f = if i <= 2
@@ -27,22 +27,13 @@ module Fib
     fib.values
   end
 
-  def self.hash_fib
+  def self.hash_fib(n)
     fib = Hash.new { |h, k| h[k] = k < 2 ? k : h[k - 1] + h[k - 2] }
-    fib[25]
+    fib[n]
   end
 
-  def self.lambda_fib
+  def self.lambda_fib(n)
     f = ->(x) { x < 2 ? x : f[x - 1] + f[x - 2] }
-    f[6]
-  end
-
-  def self.run_benchmarks
-    Benchmark.benchmark "FIBONACCI" do |x|
-      x.report('fib:')         { Fib.fib(25) }
-      x.report('iter_fib:')    { Fib.iter_fib }
-      x.report('hash_fib:')    { Fib.hash_fib }
-      x.report('lambda_fib:')  { Fib.lambda_fib }
-    end
+    f[n]
   end
 end

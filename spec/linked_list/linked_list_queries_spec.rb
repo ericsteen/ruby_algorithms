@@ -8,12 +8,23 @@ RSpec.describe LinkedList, 'Queries' do
   end
 
   it '#at' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    expect(subject.at(2)).to be_a(Node)
+    expect(subject.at(2).data).to eq(2)
+    expect(subject.at(5)).to eq(nil)
   end
 
   it 'contains' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    expect(subject.contains?(2)).to eq(true)
+    expect(subject.contains?(5)).to eq(false)
   end
 
   it 'find' do
+    expect(subject.print_list).to eq('0,1,2,3,4')
+    expect(subject.find(2)).to eq(2)
+    expect { subject.find(5) }.to \
+      raise_error(LinkedList::NotFoundError, 'Not Found')
   end
 
   it '#size returns sum of nodes' do

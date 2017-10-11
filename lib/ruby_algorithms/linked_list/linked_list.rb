@@ -1,8 +1,10 @@
 require_relative 'node'
-require 'awesome_print'
+require_relative 'list_helpers'
 
-# http://rubyalgorithms.com/singly_linked_list.html
+# Singly Linked List
 class LinkedList
+  include ListHelpers
+
   attr_reader :size
 
   def initialize
@@ -11,39 +13,23 @@ class LinkedList
     @size = 0
   end
 
-  def append(data)
-    node = make_node(data)
-    if @head.nil?
-      @head = node
-    else
-      @tail.next = node
+  def recursive_reverse(node = @head)
+    (@head = node) && return if node.next.nil?
+    recursive_reverse(node.next)
+    node.next.next = node
+    node.next = nil
+  end
+
+  def iterative_reverse(node = @head)
+    curr = node
+    prev = nil
+    until curr.nil?
+      after = curr.next
+      curr.next = prev
+      prev = curr
+      curr = after
     end
-    @tail = node
-    @size += 1
-  end
-
-  def prepend(data)
-    node = make_node(data)
-    node.next = @head
-    @head = node
-    node
-  end
-
-  def head
-    return nil if @head.nil?
-    @head
-  end
-
-  def tail
-    return nil if @tail.nil?
-    @tail
-  end
-
-  def at(index)
-    return nil if @head.nil? || index > @size - 1
-    tmp = @head
-    index.times { tmp = tmp.next }
-    tmp.data
+    @head = prev
   end
 
   def contains?(data)
@@ -56,67 +42,49 @@ class LinkedList
     false
   end
 
-  # def find(data)
-  #
-  # end
-  #
-  # def insert_at
-  #
-  # end
-
-  def remove_at!(removal_node)
-    node = @head
-    prev = nil
-
-    until node.next.nil?
-      (prev.next = node.next) && return if node == removal_node
-      prev = node
-      node = node.next
-    end
-  end
-
-  # def insert_before
-  #
-  # end
-  #
-  # def insert_after
-  #
-  # end
-
-  def empty?
-    @head.nil?
-  end
-
-  def to_s
+  def find(data)
+    raise(NotFoundError, 'Not Found') if @head.nil?
     curr = @head
+    index = 0
     until curr.nil?
-      curr.to_s unless curr.nil?
+      return index if curr.data == data
+      index += 1
       curr = curr.next
     end
+    raise NotFoundError, 'Not Found'
   end
 
-  def reverse(node = @head)
-    (@head = node) && return if node.next.nil?
-    reverse(node.next)
-    node.next.next = node
-    node.next = nil
+  def insert_before(value, index)
+    node = Node.new(value)
+    prev = at(index - 1)
+    curr = at(index)
+    prev.next = node
+    node.next = curr
+    @size += 1
   end
 
-  def return_list
-    elements = []
-    curr = @head
-    until curr.nil?
-      elements << curr
-      curr = curr.next
-    end
-    elements
+  def insert_after(value, index)
+    node = Node.new(value)
+    curr = at(index)
+    after = curr.next
+    curr.next = node
+    node.next = after
+    @size += 1
   end
 
-  def print_list
-    return_list.map(&:data).join(',')
+  def remove_at(index)
+    current_node = at(index)
+    next_node = current_node.next
+    previous_node = at(index - 1)
+    previous_node.next = next_node
+    current_node.next = nil
+    @size -= 1
   end
 
-  def make_node(object)
-    object.is_a?(Node) ? object : Node.new(object)
+  def at(index)
+    return nil if @head.nil? || index > @size - 1
+    tmp = @head
+    index.times { tmp = tmp.next }
+    tmp
   end
 end
