@@ -39,7 +39,6 @@ RSpec.describe LinkedList, 'Queries' do
   end
 
   it '#tail returns the last node in the list' do
-    expect(subject.tail).to be_a(Node)
-    expect(subject.tail.data).to eq(4)
+    expect { subject.tail }.to raise_error
   end
 end

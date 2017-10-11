@@ -3,3 +3,6 @@ Style/BlockLength:
     - 'Rakefile'
     - '**/*.rake'
     - 'spec/**/*.rb'
+Style/Semicolon:
+  # Allow `;` to separate several expressions on the same line.
+  AllowAsExpressionSeparator: true

@@ -10,6 +10,8 @@ Singly Linked List
 
 ## Todo:
 
+Factorial
+
 ### Data Structures:
 
 Doubly Linked List

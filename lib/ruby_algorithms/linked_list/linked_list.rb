@@ -9,7 +9,6 @@ class LinkedList
 
   def initialize
     @head = nil
-    @tail = nil
     @size = 0
   end
 
@@ -86,5 +85,28 @@ class LinkedList
     tmp = @head
     index.times { tmp = tmp.next }
     tmp
+  end
+
+  def self.query_benchmarks
+    list = LinkedList.new
+    2000.times { |i| list.append(i) }
+    Benchmark.benchmark "LINKEDLIST QUERIES\n" do |x|
+      x.report('#at:')          { list.at(1995) }
+      x.report('#contains?:')   { list.contains?(1995) }
+      x.report('#find:')        { list.find(1995) }
+      x.report('#return_list:') { list.return_list }
+    end
+  end
+
+  def self.update_benchmarks
+    list = LinkedList.new
+    2000.times { |i| list.append(i) }
+    Benchmark.benchmark "LINKEDLIST UPDATES\n" do |x|
+      x.report('#recursive_reverse:') { list.recursive_reverse }
+      x.report('#iterative_reverse:') { list.iterative_reverse }
+      x.report('#insert_before:')     { list.insert_before(3, 1995) }
+      x.report('#insert_after:')      { list.insert_after(3, 1995) }
+      x.report('#remove_at:')         { list.remove_at(1995) }
+    end
   end
 end

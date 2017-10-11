@@ -5,8 +5,14 @@ class LinkedList
 
     def append(data)
       node = make_node(data)
-      @head.nil? ? @head = node : @tail.next = node
-      @tail = node
+      if @head.nil?
+        @head = node
+      else
+        curr = at(@size - 1)
+        after = curr.next
+        curr.next = node
+        node.next = after
+      end
       @size += 1
     end
 
@@ -27,6 +33,7 @@ class LinkedList
     end
 
     def tail
+      raise 'No tail for Singly Linked List' unless @tail
       return nil if @tail.nil?
       @tail
     end

@@ -32,8 +32,17 @@ module Fib
     fib[n]
   end
 
-  def self.lambda_fib(n)
+  def self.proc_fib(n)
     f = ->(x) { x < 2 ? x : f[x - 1] + f[x - 2] }
     f[n]
+  end
+
+  def self.benchmarks
+    Benchmark.benchmark "FIBONACCI\n" do |x|
+      x.report('Iterative:')    { Fib.iter_fib(25) }
+      x.report('Recursive:')    { Fib.fib(25) }
+      x.report('Hash:')         { Fib.hash_fib(25) }
+      x.report('Proc:')         { Fib.proc_fib(25) }
+    end
   end
 end
