@@ -1,7 +1,7 @@
 # fibonacci sequence
 module Fib
   @mem ||= {}
-  # top down: recursive
+  # top down: recursive dynamic programming
   def self.fib(n)
     return @mem[n] if @mem[n]
     f = if n <= 2
