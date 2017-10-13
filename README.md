@@ -8,6 +8,8 @@ Factorial
 
 Singly Linked List
 
+Coin Change
+
 ## Todo:
 
 
@@ -40,8 +42,6 @@ Primes
 Cycle Detection
 
 Kadane's
-
-Coin Change
 
 Knapsack
 
