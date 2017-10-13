@@ -1,4 +1,13 @@
 module CoinChange
+
+  def self.iter_coin_change
+
+  end
+
+  def self.recursive_coin_change
+
+  end
+
   def self.hash_change(amount, coins = [25, 10, 5, 1])
    coins.sort! { |a, b| b <=> a }
 

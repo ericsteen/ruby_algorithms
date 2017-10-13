@@ -1,8 +1,6 @@
 # RubyAlgorithms
 
-A collection of practical data structures & algorithms in Ruby and benchmarks for performance analysis of various algorithmic techniques.
-
-## Done
+A collection of practical and questionably impractical data structures & algorithms in Ruby with benchmarks allowing the reader to compare and contrast various algorithmic techniques.
 
 Fibonacci (multiple methods)
 
@@ -17,11 +15,11 @@ Singly Linked List
 
 Doubly Linked List
 
-ADT API for Data Structures (Princeton Lectures, Java "Algorithms" book)
+ADT API for Advanced Data Structures
 
-Adjacency List
+Adjacency List (sparse graphs)
 
-Adjacency Matrix (non-sparse graphs, rare.. knuth)
+Adjacency Matrix (non-sparse graphs)
 
 Generalized BST
 
@@ -32,6 +30,12 @@ DiGraph
 BiPartite graphs
 
 ### Algorithms:
+
+Sorting
+
+Searching
+
+Primes
 
 Cycle Detection
 
@@ -55,11 +59,7 @@ Connected Components
 
 Metropolis-Hastings
 
-### FUTURE WORK:
-
 Markov Decision Processes
-
-Portfolio Optimization
 
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_algorithms`. To experiment with that code, run `bin/console` for an interactive prompt.
