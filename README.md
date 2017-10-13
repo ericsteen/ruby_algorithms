@@ -1,42 +1,67 @@
 # RubyAlgorithms
 
-DONE:
-Fibonacci(Dynamic Programming)
-LinkedList (reverse, etc (coderust))
+ A collection of practical data structures & algorithms in Ruby and benchmarks for performance analysis of various algorithmic techniques.
 
-TODO:
-Data Structures:
+## Done
+
+Fibonacci (multiple methods)
+
+Singly Linked List
+
+## Todo:
+
+Factorial
+
+### Data Structures:
+
+Doubly Linked List
+
+ADT API for Data Structures (Princeton Lectures, Java "Algorithms" book)
+
 Adjacency List
+
 Adjacency Matrix (non-sparse graphs, rare.. knuth)
 
 Generalized BST
+
 Generalized Graph
+
 DiGraph
+
 BiPartite graphs
 
-ADT API for algorithms (Princeton Lectures, Java "Algorithms" book)
+### Algorithms:
 
-Algorithms:
+Cycle Detection
+
 Kadane's
-Knapsack
-Multi-Armed Bandit
-BFS
-DFS
-Decision Tree Learning - https://en.wikipedia.org/wiki/Decision_tree_learning
+
 Coin Change
-Greedy
+
+Knapsack
+
+Multi-Armed Bandit
+
+BFS
+
+DFS
+
 Shortest Paths (Djikstra, A*)
+
 Connected Components
+
+[Decision Tree Learning](https://en.wikipedia.org/wiki/Decision_tree_learning)
+
 Metropolis-Hastings
 
-FUTURE WORK:
+### FUTURE WORK:
+
 Markov Decision Processes
+
 Portfolio Optimization
 
 
-
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_algorithms`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 
 
 ## Installation

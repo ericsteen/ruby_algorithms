@@ -6,7 +6,9 @@ RSpec.describe RubyAlgorithms do
   end
 
   it 'has benchmarks' do
-    RubyAlgorithms.run_query_benchmarks
-    RubyAlgorithms.run_update_benchmarks
+    Fib.benchmarks
+    Factorial.benchmarks
+    LinkedList.query_benchmarks
+    LinkedList.update_benchmarks
   end
 end
