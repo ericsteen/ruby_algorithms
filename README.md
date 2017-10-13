@@ -1,16 +1,17 @@
 # RubyAlgorithms
 
- A collection of practical data structures & algorithms in Ruby and benchmarks for performance analysis of various algorithmic techniques.
+A collection of practical data structures & algorithms in Ruby and benchmarks for performance analysis of various algorithmic techniques.
 
 ## Done
 
 Fibonacci (multiple methods)
 
+Factorial
+
 Singly Linked List
 
 ## Todo:
 
-Factorial
 
 ### Data Structures:
 
