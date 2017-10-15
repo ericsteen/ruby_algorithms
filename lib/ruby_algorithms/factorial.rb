@@ -33,9 +33,9 @@ module Factorial
     Benchmark.benchmark "FACTORIAL\n" do |x|
       x.report('Iterative:')   { Factorial.iter_fact(2500) }
       x.report('Recursive:')   { Factorial.recursive_fact(2500) }
-      x.report('Inject')       { Factorial.inject_fact(2500) }
-      x.report('Proc')         { Factorial.proc_fact(2500) }
-      x.report('While')        { Factorial.while_fact(2500) }
+      x.report('Inject:')       { Factorial.inject_fact(2500) }
+      x.report('Proc:')         { Factorial.proc_fact(2500) }
+      x.report('While:')        { Factorial.while_fact(2500) }
     end
   end
 end
