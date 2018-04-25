@@ -4,7 +4,7 @@ A collection of practical and questionably impractical data structures & algorit
 
 ## Done
 
-Fibonacci (multiple methods)
+Fibonacci
 
 Factorial
 
