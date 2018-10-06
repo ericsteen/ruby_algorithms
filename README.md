@@ -2,7 +2,7 @@
 
 A collection of practical and questionably impractical data structures & algorithms in Ruby with benchmarks allowing the reader to compare and contrast various algorithmic techniques.
 
-## Done(?)
+## Done(?):
 
 Fibonacci
 
