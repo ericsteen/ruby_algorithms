@@ -2,7 +2,7 @@
 
 A collection of practical and questionably impractical data structures & algorithms in Ruby with benchmarks allowing the reader to compare and contrast various algorithmic techniques.
 
-## Done
+## Done(?)
 
 Fibonacci
 
@@ -57,7 +57,7 @@ Shortest Paths (Djikstra, A*)
 
 Connected Components
 
-[Decision Tree Learning](https://en.wikipedia.org/wiki/Decision_tree_learning)
+Decision Tree Learning
 
 Metropolis-Hastings
 
