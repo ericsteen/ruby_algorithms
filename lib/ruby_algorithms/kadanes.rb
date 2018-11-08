@@ -9,10 +9,6 @@ module Kadanes
   # added to it, then do so.
   # the interesting part is proving the math behind it
   def self.max_subarray_sum(arr)
-
-  end
-
-  def self.max_subarray_sum(arr)
     max_so_far = max_ending_here = -1.0 / 0 # -Infinity
     arr.each do |i|
       max_ending_here = [i, max_ending_here + i].max
