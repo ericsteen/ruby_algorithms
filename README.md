@@ -1,8 +1,12 @@
 # RubyAlgorithms
 
-A collection of practical and questionably impractical data structures & algorithms in Ruby with benchmarks allowing the reader to compare and contrast various algorithmic techniques.
+A collection of practical and questionably impractical data structures &
+algorithms in Ruby with benchmarks allowing the algorithmist to compare and
+contrast various algorithmic techniques using ruby.
 
-## Done(?):
+## Done:
+
+### Algos:
 
 Fibonacci
 
@@ -14,22 +18,30 @@ Kadane's Max Subarray Algorithm
 
 Singly Linked List
 
-## Todo:
+Generalized BST
 
+Generalized Graph
 
-### Data Structures:
+Probability
 
-Doubly Linked List
-
-ADT API for Advanced Data Structures
+Queue
 
 Adjacency List (sparse graphs)
 
 Adjacency Matrix (non-sparse graphs)
 
-Generalized BST
+Searching
 
-Generalized Graph
+## Todo:
+
+
+### Data Structures:
+
+Priority Queue
+
+Doubly Linked List
+
+ADT API for Advanced Data Structures
 
 DiGraph
 
@@ -37,31 +49,29 @@ BiPartite graphs
 
 ### Algorithms:
 
-Sorting
+BFS
 
-Searching
+DFS
 
-Primes
+Decision Tree Learning
 
-Cycle Detection
+Markov Decision Processes
+
+Shortest Paths (Djikstra, A*)
 
 Knapsack
 
 Multi-Armed Bandit
 
-BFS
-
-DFS
-
-Shortest Paths (Djikstra, A*)
+Cycle Detection
 
 Connected Components
 
-Decision Tree Learning
+Sorting
+
+Primes
 
 Metropolis-Hastings
-
-Markov Decision Processes
 
 
 ## Installation
