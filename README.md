@@ -2,9 +2,9 @@
 
 A collection of practical and questionably impractical data structures & algorithms in Ruby with benchmarks allowing the reader to compare and contrast various algorithmic techniques.
 
-## Done
+## Done(?):
 
-Fibonacci (multiple methods)
+Fibonacci
 
 Factorial
 
@@ -57,14 +57,11 @@ Shortest Paths (Djikstra, A*)
 
 Connected Components
 
-[Decision Tree Learning](https://en.wikipedia.org/wiki/Decision_tree_learning)
+Decision Tree Learning
 
 Metropolis-Hastings
 
 Markov Decision Processes
-
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_algorithms`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 
 ## Installation
