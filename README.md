@@ -6,7 +6,7 @@ contrast various algorithmic techniques using ruby.
 
 ## Done:
 
-### Algos:
+### Algorithms:
 
 Fibonacci
 
