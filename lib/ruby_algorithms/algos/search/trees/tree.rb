@@ -1,33 +1,15 @@
 class Tree
-  attr_reader :children
+  attr_accessor :children
   attr_reader :root
 
   def initialize(root)
     @children = Hash.new([])
     @root = root
-    @child_to_parent = {}
   end
 
   def traverse(node)
     yield node
     @children[node].each { |child| traverse(child) }
-  end
-
-  def add(parent, children)
-    @children[parent] = children
-    children.each do |child|
-      @child_to_parent[child] = parent
-    end
-  end
-
-  def find_path_to_root(node)
-    path = []
-    cur_node = node
-    path << cur_node
-    while cur_node  = @child_to_parent[cur_node]
-      path.reverse! # if we want path direction for root-to-node
-      return path
-    end
   end
 end
 
