@@ -6,7 +6,7 @@ module CoinChange
     end
   end
 
-  def make_change(a, list = [25, 10, 5, 1])
+  def self.make_change(a, list = [25, 10, 5, 1])
     return nil if a < 0
     return nil if a != a.floor
 
@@ -33,11 +33,6 @@ module CoinChange
       a = parent
     end
     result.sort!.reverse!
- end
-
-
-  def self.recursive_coin_change(amount, coins = [25, 10, 5, 1])
-
   end
 
   def self.hash_coin_change(amount, coins = [25, 10, 5, 1])
@@ -74,9 +69,14 @@ module CoinChange
 
   def self.benchmarks
     Benchmark.benchmark "COIN CHANGE\n" do |x|
-      x.report('Iterative:')    { CoinChange.iter_coin_change(23.11) }
-      x.report('Recursive:')    { CoinChange.recursive_coin_change(23.11) }
-      x.report('Hash:')         { CoinChange.hash_coin_change(23.11) }
+      x.report('Iterative:')    { CoinChange.iter_coin_change(61.80) }
+      x.report('Make Change:')  { CoinChange.make_change(61) }
+      x.report('Hash:')         { CoinChange.hash_coin_change(61.80) }
     end
   end
 end
+
+# puts CoinChange.iter_coin_change(61.8)
+puts CoinChange.hash_coin_change(61.8)
+
+CoinChange.benchmarks

@@ -46,3 +46,5 @@ module Fib
     end
   end
 end
+
+Fib.benchmarks

@@ -14,7 +14,7 @@ class Queue
 
   # Enqueue a new node by first checking if there is anything on the queue and if
   # so, assign a new node to the @last pointer then setting @first to @last.
-  # Otherwise, we create a new node and point to it form the @last node (via the
+  # Otherwise, we create a new node and point to it from the @last node (via the
   # next attribute). Then override @last with @last.next.
 
   def enqueue(obj)

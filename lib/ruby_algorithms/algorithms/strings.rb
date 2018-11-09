@@ -40,5 +40,5 @@ class Dictionary
 end
 
 white_space_tokenizer = Proc.new { |s| s.downcase.split }
-dictionary = Dictionary.new(['Art of War', 'War of Art','War and Peace'], white_space_tokenizer)
+dictionary = Dictionary.new(['Art of War', 'War of Art', 'War and Peace'], white_space_tokenizer)
 puts dictionary.find_most_similar('art war')

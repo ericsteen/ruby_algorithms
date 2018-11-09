@@ -14,10 +14,8 @@ class ProbabilitySpace
      end
    end
 
+  # TODO: compute for event sequence
   def probability(event)
-    # TODO: compute for event sequence
-    # event.inject { |acc, e| acc += @p[e] }
-
     (@p[event] * 100).round
   end
 
