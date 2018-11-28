@@ -34,13 +34,18 @@ Searching
 
 String Similarity
 
+Priority Queue
+
+Heap
+
+BFS
+
+DFS
 
 ## Todo:
 
 
 ### Data Structures:
-
-Priority Queue
 
 Doubly Linked List
 
@@ -51,15 +56,8 @@ DiGraph
 BiPartite graphs
 
 ### Algorithms:
+
 String Pattern Matching (Naive, Rubin-Karp, KNP)
-
-BFS
-
-DFS
-
-Decision Tree Learning
-
-Markov Decision Processes
 
 Shortest Paths (Djikstra, A*)
 
@@ -67,15 +65,19 @@ Knapsack
 
 Multi-Armed Bandit
 
+Decision Tree Learning
+
+Markov Decision Processes
+
 Cycle Detection
 
 Connected Components
 
+Metropolis-Hastings
+
 Sorting
 
 Primes
-
-Metropolis-Hastings
 
 
 ## Installation
