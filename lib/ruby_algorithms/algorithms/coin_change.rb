@@ -45,7 +45,6 @@ module CoinChange
      elsif coins.include?(key)
        [key]
      else
-      #  byebug
        coins.
          # prune unhelpful coins
          reject { |coin| coin > key }.
@@ -69,14 +68,13 @@ module CoinChange
 
   def self.benchmarks
     Benchmark.benchmark "COIN CHANGE\n" do |x|
-      x.report('Iterative:')    { CoinChange.iter_coin_change(61.80) }
+      x.report('Iterative:')    { CoinChange.iter_coin_change(61) }
       x.report('Make Change:')  { CoinChange.make_change(61) }
-      x.report('Hash:')         { CoinChange.hash_coin_change(61.80) }
+      x.report('Hash:')         { CoinChange.hash_coin_change(61) }
     end
   end
 end
 
-# puts CoinChange.iter_coin_change(61.8)
-puts CoinChange.hash_coin_change(61.8)
+puts CoinChange.hash_coin_change(61)
 
 CoinChange.benchmarks

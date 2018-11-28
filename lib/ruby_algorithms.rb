@@ -1,6 +1,9 @@
 require 'byebug'
 require 'awesome_print'
 require 'benchmark'
+
+module Algorithms; end
+module Containers; end
 # data structures
 require_relative 'ruby_algorithms/version'
 require_relative 'ruby_algorithms/containers/stack'
@@ -17,8 +20,8 @@ require_relative 'ruby_algorithms/algorithms/search/graphs/bfs'
 require_relative 'ruby_algorithms/algorithms/search/graphs/dfs'
 require_relative 'ruby_algorithms/algorithms/statistics/probability'
 require_relative 'ruby_algorithms/algorithms/set_partition'
-require_relative 'ruby_algorithms/algorithms/search/trees/bst'
-require_relative 'ruby_algorithms/algorithms/pattern_matching/string_similarity'
+require_relative 'ruby_algorithms/algorithms/strings/pattern_matching'
+require_relative 'ruby_algorithms/algorithms/strings/string_similarity'
 require_relative 'ruby_algorithms/algorithms/fibonacci'
 require_relative 'ruby_algorithms/algorithms/factorial'
 require_relative 'ruby_algorithms/algorithms/coin_change'

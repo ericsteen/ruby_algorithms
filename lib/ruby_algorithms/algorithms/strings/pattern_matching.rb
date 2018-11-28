@@ -1,6 +1,6 @@
-module PatternMatching do
-  # naive string pattern matching
+module PatternMatching
 
+  # naive string pattern matching
   def naive
 
   end
