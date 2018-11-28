@@ -2,7 +2,7 @@
 
 A collection of practical and questionably impractical data structures &
 algorithms in Ruby with benchmarks allowing the algorithmist to compare and
-contrast various algorithmic techniques using ruby.
+contrast various algorithmic techniques.
 
 ## Done:
 
@@ -22,7 +22,7 @@ Generalized BST
 
 Generalized Graph
 
-Probability
+Probability Space
 
 Queue
 
@@ -31,6 +31,9 @@ Adjacency List (sparse graphs)
 Adjacency Matrix (non-sparse graphs)
 
 Searching
+
+String Similarity
+
 
 ## Todo:
 
@@ -48,6 +51,7 @@ DiGraph
 BiPartite graphs
 
 ### Algorithms:
+String Pattern Matching (Naive, Rubin-Karp, KNP)
 
 BFS
 
