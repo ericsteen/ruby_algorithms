@@ -1,6 +1,5 @@
 class BFS
 
-  # iterative
   def self.search(node)
     level = {node => 0}
     parent = {node => nil}
@@ -10,7 +9,6 @@ class BFS
     while !frontier.empty? do
       nxt = []
       frontier.each do |u|
-        p u.data, i
         u.neighbors.each do |v|
           unless level[v]
             level[v] = i
