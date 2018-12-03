@@ -6,8 +6,6 @@ contrast various algorithmic techniques.
 
 ## Done:
 
-### Algorithms:
-
 Fibonacci
 
 Factorial
@@ -60,14 +58,6 @@ BiPartite graphs
 String Pattern Matching (Naive, Rubin-Karp, KNP)
 
 Shortest Paths (Djikstra, A*)
-
-Knapsack
-
-Multi-Armed Bandit
-
-Decision Tree Learning
-
-Markov Decision Processes
 
 Cycle Detection
 
