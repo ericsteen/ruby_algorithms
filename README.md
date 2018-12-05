@@ -54,8 +54,6 @@ BiPartite graphs
 
 ### Algorithms:
 
-String Pattern Matching (Naive, Rubin-Karp, KNP)
-
 Shortest Paths (Djikstra, A*)
 
 Cycle Detection
